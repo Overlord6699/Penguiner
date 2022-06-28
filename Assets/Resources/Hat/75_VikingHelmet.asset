@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 75_VikingHelmet
+  m_EditorClassIdentifier: 
+  ItemName: Viking Helmet
+  ItemPrice: 75
+  Thumbnail: {fileID: 21300000, guid: 7efab893811faff4f9ca624ea3d35cbe, type: 3}
+  Model: {fileID: 4728464317198593068, guid: c0db19b5599d993499d76eab6c124dc6, type: 3}

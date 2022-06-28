@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 40_GladiatorHelmet2
+  m_EditorClassIdentifier: 
+  ItemName: Gladiator Helmet #2
+  ItemPrice: 40
+  Thumbnail: {fileID: 21300000, guid: 0ab3597969812aa43abb0d215ec51f38, type: 3}
+  Model: {fileID: 1294322628478009402, guid: 6175cae7062e67142bac3a607499505a, type: 3}

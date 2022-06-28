@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 30_RussianHat
+  m_EditorClassIdentifier: 
+  ItemName: Russian Hat
+  ItemPrice: 30
+  Thumbnail: {fileID: 21300000, guid: f0be5045470eb2e42a99d649a5428c3e, type: 3}
+  Model: {fileID: 6418249905218524985, guid: a20903c3f5ee3bc4eb43dfb239371d9b, type: 3}

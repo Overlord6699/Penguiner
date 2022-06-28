@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 50_DivingHelmet
+  m_EditorClassIdentifier: 
+  ItemName: Diving Helmet
+  ItemPrice: 50
+  Thumbnail: {fileID: 21300000, guid: c4000db35fc1c524d943da04b93a4eb0, type: 3}
+  Model: {fileID: 7140654029738498611, guid: 72f96d8a17cc7bc46b56e1f9115f8c0b, type: 3}

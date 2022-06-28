@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 10_BigHornedHelmet
+  m_EditorClassIdentifier: 
+  ItemName: Big Horned Helmet
+  ItemPrice: 10
+  Thumbnail: {fileID: 21300000, guid: 4d83ad9ff812f744793e6eb8f83c2f9b, type: 3}
+  Model: {fileID: 3536402639541903021, guid: bc1809bb56ce6654a82e4cd73262e129, type: 3}

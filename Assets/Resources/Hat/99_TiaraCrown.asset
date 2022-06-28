@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 99_TiaraCrown
+  m_EditorClassIdentifier: 
+  ItemName: Tiara Crown
+  ItemPrice: 100
+  Thumbnail: {fileID: 21300000, guid: 42ce733426bf252489289a133a6f5147, type: 3}
+  Model: {fileID: 5721098808777639390, guid: b1fdb4d0a87a4cb4cb4ac62a0f58c5b0, type: 3}

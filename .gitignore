@@ -1,0 +1,48 @@
+
+.~*
+desktop.ini
+Builds/
+*.apk
+*.aab
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/ServerData/
+/StreamingAssets/
+/Assets/StreamingAssets/
+
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+obj/
+_Archives
+_Sources/Temp/
+_Sources/Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+_Sources/obj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vs
+/Build

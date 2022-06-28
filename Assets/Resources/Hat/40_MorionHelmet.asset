@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4742661867d964f8e2bb741f3c2a41, type: 3}
+  m_Name: 40_MorionHelmet
+  m_EditorClassIdentifier: 
+  ItemName: Morion Helmet
+  ItemPrice: 40
+  Thumbnail: {fileID: 21300000, guid: dbf9a903bc59f3b458aae093b9b53397, type: 3}
+  Model: {fileID: 2630500205785382897, guid: bab74edf495d27341ae20a883a1ebea7, type: 3}
