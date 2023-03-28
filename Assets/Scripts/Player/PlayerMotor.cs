@@ -1,15 +1,21 @@
-﻿using System;
+﻿using Animation;
+using Player.State;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Audio;
 
 public class PlayerMotor : MonoBehaviour
 {
-    [HideInInspector] public Vector3 moveVector;
-    [HideInInspector] public float verticalVelocity;
-    [HideInInspector] public bool isGrounded;
-    [HideInInspector] public int currentLane;
+
+    [HideInInspector]
+    public float VerticalVelocity;
+    [HideInInspector] 
+    public bool IsGrounded;
+    [HideInInspector] 
+    public int CurrentLane;
 
 
-
+    [SerializeField]
     public float distanceInBetweenLanes = 3.0f;
     public float baseRunSpeed = 5.0f;
     public float baseSidewaySpeed = 10.0f;
@@ -21,6 +27,8 @@ public class PlayerMotor : MonoBehaviour
     private AnimationController animController;
 
     private BaseState state;
+    
+    private Vector3 _moveVector;
     private bool isPaused;
 
     private void Start()
@@ -28,6 +36,7 @@ public class PlayerMotor : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animController = GetComponent<AnimationController>();
         state = GetComponent<RunningState>();
+        
         state.Construct(animController);
 
         isPaused = true;
@@ -40,36 +49,36 @@ public class PlayerMotor : MonoBehaviour
     }
     private void UpdateMotor()
     {// Check if we're grounded
-        isGrounded = controller.isGrounded;
+        IsGrounded = controller.isGrounded;
 
         // Are we trying to change state?
         state.Transition();
 
         
         // Check if we're grounded
-        isGrounded = controller.isGrounded;
+        IsGrounded = controller.isGrounded;
 
         // How should we be moving right now? based on state
-        moveVector = state.ProcessMotion();
+        _moveVector = state.ProcessMotion();
 
         // Are we trying to change state?
         state.Transition();
 
         // Feed our animator some values
-        animController.SetGrounded(isGrounded);
-        animController.SetSpeed(Mathf.Abs(moveVector.z));
+        animController.SetGrounded(IsGrounded);
+        animController.SetSpeed(Mathf.Abs(_moveVector.z));
 
         // Move the player
-        controller.Move(moveVector * Time.deltaTime);
+        controller.Move(_moveVector * Time.deltaTime);
     }
     public float SnapToLane()
     {
         float r = 0.0f;
 
         // If we're not directly on top of a lane
-        if (transform.position.x != (currentLane * distanceInBetweenLanes))
+        if (transform.position.x != (CurrentLane * distanceInBetweenLanes))
         {
-            float deltaToDesiredPosition = (currentLane * distanceInBetweenLanes) - transform.position.x;
+            float deltaToDesiredPosition = (CurrentLane * distanceInBetweenLanes) - transform.position.x;
             r = (deltaToDesiredPosition > 0) ? 1 : -1;
             r *= baseSidewaySpeed;
 
@@ -86,7 +95,7 @@ public class PlayerMotor : MonoBehaviour
     }
     public void ChangeLane(int direction)
     {
-        currentLane = Mathf.Clamp(currentLane + direction, -1, 1);
+        CurrentLane = Mathf.Clamp(CurrentLane + direction, -1, 1);
     }
     public void ChangeState(BaseState s)
     {
@@ -96,9 +105,9 @@ public class PlayerMotor : MonoBehaviour
     }
     public void ApplyGravity()
     {
-        verticalVelocity -= gravity * Time.deltaTime;
-        if (verticalVelocity < -terminalVelocity)
-            verticalVelocity = -terminalVelocity;
+        VerticalVelocity -= gravity * Time.deltaTime;
+        if (VerticalVelocity < -terminalVelocity)
+            VerticalVelocity = -terminalVelocity;
     }
 
     public void PausePlayer()
@@ -116,7 +125,7 @@ public class PlayerMotor : MonoBehaviour
     }
     public void ResetPlayer()
     {
-        currentLane = 0;
+        CurrentLane = 0;
         transform.position = Vector3.zero;
         animController.StartIdleAnimation();
         PausePlayer();

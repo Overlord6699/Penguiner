@@ -1,46 +1,50 @@
-﻿using UnityEngine;
+﻿using Animation;
+using UnityEngine;
 
-public class JumpingState : BaseState
+namespace Player.State
 {
-    public float jumpForce = 7.0f;
-
-    public override void Construct(AnimationController cont)
+    public class JumpingState : BaseState
     {
-        base.Construct(cont);
- 
-        Jump();
-    }
+        public float jumpForce = 7.0f;
 
-    private void Jump()
-    {
-        motor.verticalVelocity = jumpForce;
-        animController?.TriggerJump();
-    }
+        public override void Construct(AnimationController cont)
+        {
+            base.Construct(cont);
 
-    public override Vector3 ProcessMotion()
-    {
-        // Apply gravity
-        motor.ApplyGravity();
+            Jump();
+        }
 
-        // Create our return vector
-        Vector3 m = Vector3.zero;
+        private void Jump()
+        {
+            motor.VerticalVelocity = jumpForce;
+            animController?.TriggerJump();
+        }
 
-        m.x = motor.SnapToLane();
-        m.y = motor.verticalVelocity;
-        m.z = motor.baseRunSpeed;
+        public override Vector3 ProcessMotion()
+        {
+            // Apply gravity
+            motor.ApplyGravity();
 
-        return m;
-    }
+            // Create our return vector
+            Vector3 m = Vector3.zero;
 
-    public override void Transition()
-    {
-        if (InputManager.Instance.SwipeLeft)
-            motor.ChangeLane(LEFT);
+            m.x = motor.SnapToLane();
+            m.y = motor.VerticalVelocity;
+            m.z = motor.baseRunSpeed;
 
-        if (InputManager.Instance.SwipeRight)
-            motor.ChangeLane(RIGHT);
+            return m;
+        }
 
-        if (motor.verticalVelocity < 0)
-            motor.ChangeState(GetComponent<FallingState>());
+        public override void Transition()
+        {
+            if (InputManager.Instance.SwipeLeft)
+                motor.ChangeLane(LEFT);
+
+            if (InputManager.Instance.SwipeRight)
+                motor.ChangeLane(RIGHT);
+
+            if (motor.VerticalVelocity < 0)
+                motor.ChangeState(GetComponent<FallingState>());
+        }
     }
 }

@@ -7,11 +7,24 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="AudioManager" t="Include">
+          <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
           </e>
           <e p="Collectible" t="Include">
             <e p="Fish.cs" t="Include" />
+          </e>
+          <e p="Configuration" t="Include">
+            <e p="ConfigurationManager.cs" t="Include" />
+            <e p="SO" t="Include">
+              <e p="AudioClipConfiguration.cs" t="Include" />
+              <e p="AudioConfiguration.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="DeathStateController.cs" t="Include" />
+            <e p="GameStateController.cs" t="Include" />
+            <e p="InitGameController.cs" t="Include" />
+            <e p="TimerController.cs" t="Include" />
           </e>
           <e p="GameFlow" t="Include">
             <e p="GameManager.cs" t="Include" />
@@ -34,7 +47,9 @@
             <e p="AdManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="AnimationController.cs" t="Include" />
+            <e p="Animation" t="Include">
+              <e p="AnimationController.cs" t="Include" />
+            </e>
             <e p="PlayerMotor.cs" t="Include" />
             <e p="State" t="Include">
               <e p="BaseState.cs" t="Include" />
@@ -53,6 +68,14 @@
           <e p="Shop" t="Include">
             <e p="Hat.cs" t="Include" />
             <e p="HatLogic.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Views" t="Include">
+              <e p="DeathStateView.cs" t="Include" />
+              <e p="GameStateView.cs" t="Include" />
+              <e p="InitGameView.cs" t="Include" />
+              <e p="TimerView.cs" t="Include" />
+            </e>
           </e>
           <e p="WorldGeneration" t="Include">
             <e p="Chunk.cs" t="Include" />

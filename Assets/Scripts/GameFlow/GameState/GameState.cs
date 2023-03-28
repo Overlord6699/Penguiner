@@ -1,26 +1,29 @@
 ﻿using UnityEngine;
 
-public abstract class GameState : MonoBehaviour, IGameState
+namespace GameFlow.GameState
 {
-    protected GameManager _brain;
-
-    protected virtual void Awake()
+    public abstract class GameState : MonoBehaviour, IGameState
     {
-        _brain = GetComponent<GameManager>();
-    }
+        protected GameManager _brain;
 
-    public virtual void Construct()
-    {
-        Debug.Log("Constructing : " + this.ToString());
-    }
+        protected virtual void Awake()
+        {
+            _brain = GetComponent<GameManager>();
+        }
 
-    public virtual void Destruct()
-    {
+        public virtual void Construct()
+        {
+            Debug.Log("Constructing : " + this.ToString());
+        }
 
-    }
+        public virtual void Destruct()
+        {
 
-    public virtual void UpdateState()
-    {
+        }
 
+        public virtual void UpdateState()
+        {
+
+        }
     }
 }

@@ -1,7 +1,10 @@
 
-public interface IGameState 
+namespace GameFlow.GameState
 {
-    void Construct();
-    void Destruct();
-    void UpdateState();
+    public interface IGameState 
+    {
+        void Construct();
+        void Destruct();
+        void UpdateState();
+    }
 }

@@ -1,45 +1,52 @@
-﻿using TMPro;
+﻿using Audio;
+using Controllers;
+using TMPro;
+using UI.Views;
 using UnityEngine;
 
-public class GameStateGame : GameState
+namespace GameFlow.GameState
 {
-    public GameObject gameUI;
-    [SerializeField] private TextMeshProUGUI fishCount;
-    [SerializeField] private TextMeshProUGUI scoreCount;
-    [SerializeField] private AudioClip gameLoopMusic;
-
-    public override void Construct()
+    public class GameStateGame : GameState
     {
-        base.Construct();
-        GameManager.Instance.ResumeGame();
-        GameManager.Instance.ChangeCamera(GameCamera.Game);
+        public GameObject gameUI;
+        [SerializeField]
+        private GameStateController _controller;
+        
+        [SerializeField] private AudioClip gameLoopMusic;
 
-        GameStats.Instance.OnCollectFish += OnCollectFish;
-        GameStats.Instance.OnScoreChange += OnScoreChange;
+        public override void Construct()
+        {
+            base.Construct();
+            GameManager.Instance.ResumeGame();
+            GameManager.Instance.ChangeCamera(GameCamera.Game);
 
-        gameUI.SetActive(true);
+            GameStats.Instance.OnCollectFish += OnCollectFish;
+            GameStats.Instance.OnScoreChange += OnScoreChange;
 
-        AudioManager.Instance.PlayMusicWithXFade(gameLoopMusic, 0.5f);
-    }
+            gameUI.SetActive(true);
 
-    private void OnCollectFish(int amnCollected)
-    {
-        fishCount.text = GameStats.Instance.FishToText();
-    }
-    private void OnScoreChange(float score)
-    {
-        scoreCount.text = GameStats.Instance.ScoreToText();
-    }
+            AudioManager.Instance.PlayMusicWithXFade(gameLoopMusic, 0.5f);
+        }
 
-    public override void Destruct()
-    {
-        gameUI.SetActive(false);
+        private void OnCollectFish(int amnCollected)
+        {    
+            _controller.DisplayFishCount();
+        }
+        private void OnScoreChange(float score)
+        {
+            _controller.DisplayScoreCount();
+        }
 
-        GameStats.Instance.OnCollectFish -= OnCollectFish;
-        GameStats.Instance.OnScoreChange -= OnScoreChange;
-    }
-    public override void UpdateState()
-    {
-        GameManager.Instance.ScanPosition();
+        public override void Destruct()
+        {
+            gameUI.SetActive(false);
+
+            GameStats.Instance.OnCollectFish -= OnCollectFish;
+            GameStats.Instance.OnScoreChange -= OnScoreChange;
+        }
+        public override void UpdateState()
+        {
+            GameManager.Instance.ScanPosition();
+        }
     }
 }

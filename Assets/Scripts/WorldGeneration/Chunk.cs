@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 
-public class Chunk : MonoBehaviour
+namespace WorldGeneration
 {
-    public float chunkLength;
-
-    public Chunk ShowChunk()
+    public class Chunk : MonoBehaviour
     {
-        transform.gameObject.BroadcastMessage("OnShowChunk", SendMessageOptions.DontRequireReceiver);
-        gameObject.SetActive(true);
-        return this;
-    }
+        public float chunkLength;
 
-    public Chunk HideChunk()
-    {
-        gameObject.SetActive(false);
-        return this;
+        public Chunk ShowChunk()
+        {
+            transform.gameObject.BroadcastMessage("OnShowChunk", SendMessageOptions.DontRequireReceiver);
+            gameObject.SetActive(true);
+            return this;
+        }
+
+        public Chunk HideChunk()
+        {
+            gameObject.SetActive(false);
+            return this;
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using GameFlow.GameState;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
+using WorldGeneration;
 
 public enum GameCamera
 {
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField]
-    private WorldGeneration _worldGeneration;
+    private WorldGeneration.WorldGeneration _worldGeneration;
 
 
     [SerializeField]

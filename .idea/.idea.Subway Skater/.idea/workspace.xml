@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c5940b94-33f2-4689-a7ad-fb112785dc5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/GreenScreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/GreenScreen.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/Letters.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/Letters.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Letters/Materials/LPN&amp;L_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Letters/Materials/LPN&amp;L_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Penguin/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Penguin/Materials/No Name.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GamePauser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GamePauser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Atlas.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Atlas.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateGame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateShop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/IGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/IGameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monetization/AdManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monetization/AdManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/BaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/FallingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/FallingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/JumpingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/JumpingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/RespawnState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/RespawnState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/SlidingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/SlidingState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/SaveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Hat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Hat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/HatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/HatLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SceneChunkGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SceneChunkGeneration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SnowFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SnowFloor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +79,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InitGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/TimerView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@3.7.5/Runtime/Advertisement/Platform/Editor/EditorPlatform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/InitGameView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameStateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/DeathStateView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configuration/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/SlidingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/DeathState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/FallingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/JumpingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/RespawnState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/BaseState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/InitView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InitGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/InitGameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Configuration/AudioConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/AudioConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/ConfigurationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/SO/AudioClipConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/GameStateView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameStateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/DeathStateView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathStateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/TimerView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" />
       </list>
     </option>
   </component>
@@ -55,9 +132,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -90,6 +176,15 @@
       <updated>1679937179845</updated>
       <workItem from="1679937197453" duration="31000" />
       <workItem from="1679937259936" duration="285000" />
+      <workItem from="1679995663508" duration="4560000" />
+      <workItem from="1680003994124" duration="548000" />
+      <workItem from="1680004738814" duration="200000" />
+      <workItem from="1680005029487" duration="1295000" />
+      <workItem from="1680007240096" duration="190000" />
+      <workItem from="1680007482160" duration="1000" />
+      <workItem from="1680007896427" duration="1442000" />
+      <workItem from="1680038071391" duration="41000" />
+      <workItem from="1680041925189" duration="2337000" />
     </task>
     <servers />
   </component>
@@ -98,7 +193,116 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1680000230029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230029" />
+    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1680000230029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230029" />
+    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1680000230028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230028" />
+    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1680000230029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230029" />
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1680000230029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230029" />
+    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1680000230029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230029" />
+    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.2.center" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.2.left" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.2.right" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom" timestamp="1680000230031">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230031" />
+    <state width="1877" height="379" key="GridCell.Tab.3.center" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.3.left" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="1877" height="379" key="GridCell.Tab.3.right" timestamp="1680000230030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1679999475043">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="968" height="533" key="XDebugger.FullValuePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1679999475043" />
+    <state x="777" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1679998217044">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="777" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1679998217044" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1679998540577">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1679998540577" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs</url>
+          <line>34</line>
+          <properties documentPath="F:\Unity\Subway Skater\Assets\Scripts\Save\SaveManager.cs" initialLine="34">
+            <startOffsets>
+              <option value="758" />
+            </startOffsets>
+            <endOffsets>
+              <option value="872" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

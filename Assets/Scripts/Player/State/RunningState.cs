@@ -1,62 +1,66 @@
-﻿using UnityEngine;
+﻿using Animation;
+using UnityEngine;
 
-public class RunningState : BaseState
+namespace Player.State
 {
-    //private Vector3 _prevAcc= Input.acceleration;
-
-    public override void Construct(AnimationController cont)
+    public class RunningState : BaseState
     {
-        base.Construct(cont);
-        motor.verticalVelocity = 0;
-    }
+        //private Vector3 _prevAcc= Input.acceleration;
 
-    public override Vector3 ProcessMotion()
-    {
-        Vector3 m = Vector3.zero;
+        public override void Construct(AnimationController cont)
+        {
+            base.Construct(cont);
+            motor.VerticalVelocity = 0;
+        }
 
-        m.x = motor.SnapToLane();
-        m.y = -1.0f;
-        m.z = motor.baseRunSpeed;
+        public override Vector3 ProcessMotion()
+        {
+            Vector3 m = Vector3.zero;
 
-        return m;
-    }
+            m.x = motor.SnapToLane();
+            m.y = -1.0f;
+            m.z = motor.baseRunSpeed;
 
-    public override void Transition()
-    {
-        /*var acc = Input.acceleration;
+            return m;
+        }
 
-        if(acc.y-_prevAcc.y>0)
-            motor.ChangeState(GetComponent<JumpingState>());
+        public override void Transition()
+        {
+            /*var acc = Input.acceleration;
+    
+            if(acc.y-_prevAcc.y>0)
+                motor.ChangeState(GetComponent<JumpingState>());
+    
+            if (acc.y - _prevAcc.y < 0)
+                motor.ChangeState(GetComponent<SlidingState>());
+    
+            if (acc.x - _prevAcc.x > 0)
+                motor.ChangeLane(RIGHT);
+    
+    
+            if (acc.x - _prevAcc.x < 0)
+                motor.ChangeLane(LEFT);
+    
+    
+            if (!motor.isGrounded)
+                motor.ChangeState(GetComponent<FallingState>());*/
 
-        if (acc.y - _prevAcc.y < 0)
-            motor.ChangeState(GetComponent<SlidingState>());
+            if (InputManager.Instance.SwipeLeft)
+                motor.ChangeLane(LEFT);
 
-        if (acc.x - _prevAcc.x > 0)
-            motor.ChangeLane(RIGHT);
+            if (InputManager.Instance.SwipeRight)
+                motor.ChangeLane(RIGHT);
 
+            if (InputManager.Instance.SwipeUp && motor.IsGrounded)
+                motor.ChangeState(GetComponent<JumpingState>());
 
-        if (acc.x - _prevAcc.x < 0)
-            motor.ChangeLane(LEFT);
+            if (!motor.IsGrounded)
+                motor.ChangeState(GetComponent<FallingState>());
 
+            if (InputManager.Instance.SwipeDown)
+                motor.ChangeState(GetComponent<SlidingState>());
 
-        if (!motor.isGrounded)
-            motor.ChangeState(GetComponent<FallingState>());*/
-
-        if (InputManager.Instance.SwipeLeft)
-            motor.ChangeLane(LEFT);
-
-        if (InputManager.Instance.SwipeRight)
-            motor.ChangeLane(RIGHT);
-
-        if (InputManager.Instance.SwipeUp && motor.isGrounded)
-            motor.ChangeState(GetComponent<JumpingState>());
-
-        if(!motor.isGrounded)
-            motor.ChangeState(GetComponent<FallingState>());
-
-        if (InputManager.Instance.SwipeDown)
-            motor.ChangeState(GetComponent<SlidingState>());
-
-        //_prevAcc = acc;
+            //_prevAcc = acc;
+        }
     }
 }

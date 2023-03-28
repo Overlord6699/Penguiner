@@ -1,61 +1,65 @@
-﻿using UnityEngine;
+﻿using Animation;
+using UnityEngine;
 
-public class SlidingState : BaseState
+namespace Player.State
 {
-    public float slideDuration = 1.0f;
-
-    // Collider logic
-    private Vector3 initialCenter;
-    private float initialSize;
-    private float slideStart;
-
-    public override void Construct(AnimationController cont)
+    public class SlidingState : BaseState
     {
-        base.Construct(cont);
+        public float slideDuration = 1.0f;
 
-        animController.TriggerSlide();
-        slideStart = Time.time;
+        // Collider logic
+        private Vector3 initialCenter;
+        private float initialSize;
+        private float slideStart;
 
-        initialSize = motor.controller.height;
-        initialCenter = motor.controller.center;
+        public override void Construct(AnimationController cont)
+        {
+            base.Construct(cont);
 
-        motor.controller.height = initialSize * 0.5f;
-        motor.controller.center = initialCenter * 0.5f;
-    }
+            animController.TriggerSlide();
+            slideStart = Time.time;
 
-    public override void Destruct()
-    {
-        motor.controller.height = initialSize;
-        motor.controller.center = initialCenter;
-        animController.TriggerRun();
-    }
+            initialSize = motor.controller.height;
+            initialCenter = motor.controller.center;
 
-    public override void Transition()
-    {
-        if (InputManager.Instance.SwipeLeft)
-            motor.ChangeLane(LEFT);
+            motor.controller.height = initialSize * 0.5f;
+            motor.controller.center = initialCenter * 0.5f;
+        }
 
-        if (InputManager.Instance.SwipeRight)
-            motor.ChangeLane(RIGHT);
+        public override void Destruct()
+        {
+            motor.controller.height = initialSize;
+            motor.controller.center = initialCenter;
+            animController.TriggerRun();
+        }
 
-        if (!motor.isGrounded)
-            motor.ChangeState(GetComponent<FallingState>());
+        public override void Transition()
+        {
+            if (InputManager.Instance.SwipeLeft)
+                motor.ChangeLane(LEFT);
 
-        if (InputManager.Instance.SwipeUp)
-            motor.ChangeState(GetComponent<JumpingState>());
+            if (InputManager.Instance.SwipeRight)
+                motor.ChangeLane(RIGHT);
 
-        if (Time.time - slideStart > slideDuration)
-            motor.ChangeState(GetComponent<RunningState>());
-    }
+            if (!motor.IsGrounded)
+                motor.ChangeState(GetComponent<FallingState>());
 
-    public override Vector3 ProcessMotion()
-    {
-        Vector3 m = Vector3.zero;
+            if (InputManager.Instance.SwipeUp)
+                motor.ChangeState(GetComponent<JumpingState>());
 
-        m.x = motor.SnapToLane();
-        m.y = -1.0f;
-        m.z = motor.baseRunSpeed;
+            if (Time.time - slideStart > slideDuration)
+                motor.ChangeState(GetComponent<RunningState>());
+        }
 
-        return m;
+        public override Vector3 ProcessMotion()
+        {
+            Vector3 m = Vector3.zero;
+
+            m.x = motor.SnapToLane();
+            m.y = -1.0f;
+            m.z = motor.baseRunSpeed;
+
+            return m;
+        }
     }
 }

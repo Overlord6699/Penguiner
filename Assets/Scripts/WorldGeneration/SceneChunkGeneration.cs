@@ -1,1 +1,4 @@
-﻿public class SceneChunkGeneration : WorldGeneration {}
+﻿namespace WorldGeneration
+{
+    public class SceneChunkGeneration : WorldGeneration {}
+}

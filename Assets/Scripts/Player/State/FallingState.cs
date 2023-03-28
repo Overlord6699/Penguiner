@@ -1,43 +1,47 @@
-﻿using UnityEngine;
+﻿using Animation;
+using UnityEngine;
 
-public class FallingState : BaseState
+namespace Player.State
 {
-    public override void Construct(AnimationController cont)
+    public class FallingState : BaseState
     {
-        base.Construct(cont);
+        public override void Construct(AnimationController cont)
+        {
+            base.Construct(cont);
 
-        Fall();
-    }
+            Fall();
+        }
 
-    private void Fall()
-    {
-        animController?.TriggerFall();
-    }
+        private void Fall()
+        {
+            animController?.TriggerFall();
+        }
 
-    public override Vector3 ProcessMotion()
-    {
-        // Apply gravity
-        motor.ApplyGravity();
+        public override Vector3 ProcessMotion()
+        {
+            // Apply gravity
+            motor.ApplyGravity();
 
-        // Create our return vector
-        Vector3 m = Vector3.zero;
+            // Create our return vector
+            Vector3 m = Vector3.zero;
 
-        m.x = motor.SnapToLane();
-        m.y = motor.verticalVelocity;
-        m.z = motor.baseRunSpeed;
+            m.x = motor.SnapToLane();
+            m.y = motor.VerticalVelocity;
+            m.z = motor.baseRunSpeed;
 
-        return m;
-    }
+            return m;
+        }
 
-    public override void Transition()
-    {
-        if (InputManager.Instance.SwipeLeft)
-            motor.ChangeLane(LEFT);
+        public override void Transition()
+        {
+            if (InputManager.Instance.SwipeLeft)
+                motor.ChangeLane(LEFT);
 
-        if (InputManager.Instance.SwipeRight)
-            motor.ChangeLane(RIGHT);
+            if (InputManager.Instance.SwipeRight)
+                motor.ChangeLane(RIGHT);
 
-        if (motor.isGrounded)
-            motor.ChangeState(GetComponent<RunningState>());
+            if (motor.IsGrounded)
+                motor.ChangeState(GetComponent<RunningState>());
+        }
     }
 }

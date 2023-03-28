@@ -1,56 +1,60 @@
-﻿using UnityEngine;
+﻿using Animation;
+using UnityEngine;
 
-public class RespawnState : BaseState
+namespace Player.State
 {
-    [SerializeField] private float verticalDistance = 25.0f;
-    [SerializeField] private float immunityTime = 1f;
-
-    private float startTime;
-
-    public override void Construct(AnimationController cont)
+    public class RespawnState : BaseState
     {
-        base.Construct(cont);
+        [SerializeField] private float verticalDistance = 25.0f;
+        [SerializeField] private float immunityTime = 1f;
 
-        startTime = Time.time;
+        private float startTime;
 
-        motor.controller.enabled = false;
-        motor.transform.position = new Vector3(0, verticalDistance, motor.transform.position.z);
-        motor.controller.enabled = true;
+        public override void Construct(AnimationController cont)
+        {
+            base.Construct(cont);
 
-        motor.verticalVelocity = 0.0f;
-        motor.currentLane = 0;
-        motor.Respawn();
-    }
+            startTime = Time.time;
 
-    public override void Destruct()
-    {
-        GameManager.Instance.ChangeCamera(GameCamera.Game);
-    }
+            motor.controller.enabled = false;
+            motor.transform.position = new Vector3(0, verticalDistance, motor.transform.position.z);
+            motor.controller.enabled = true;
 
-    public override Vector3 ProcessMotion()
-    {
-        // Apply gravity
-        motor.ApplyGravity();
+            motor.VerticalVelocity = 0.0f;
+            motor.CurrentLane = 0;
+            motor.Respawn();
+        }
 
-        // Create our return vector
-        Vector3 m = Vector3.zero;
+        public override void Destruct()
+        {
+            GameManager.Instance.ChangeCamera(GameCamera.Game);
+        }
 
-        m.x = motor.SnapToLane();
-        m.y = motor.verticalVelocity;
-        m.z = motor.baseRunSpeed;
+        public override Vector3 ProcessMotion()
+        {
+            // Apply gravity
+            motor.ApplyGravity();
 
-        return m;
-    }
+            // Create our return vector
+            Vector3 m = Vector3.zero;
 
-    public override void Transition()
-    {
-        if (motor.isGrounded && (Time.time - startTime) > immunityTime)
-            motor.ChangeState(GetComponent<RunningState>());
+            m.x = motor.SnapToLane();
+            m.y = motor.VerticalVelocity;
+            m.z = motor.baseRunSpeed;
 
-        if (InputManager.Instance.SwipeLeft)
-            motor.ChangeLane(LEFT);
+            return m;
+        }
 
-        if (InputManager.Instance.SwipeRight)
-            motor.ChangeLane(RIGHT);
+        public override void Transition()
+        {
+            if (motor.IsGrounded && (Time.time - startTime) > immunityTime)
+                motor.ChangeState(GetComponent<RunningState>());
+
+            if (InputManager.Instance.SwipeLeft)
+                motor.ChangeLane(LEFT);
+
+            if (InputManager.Instance.SwipeRight)
+                motor.ChangeLane(RIGHT);
+        }
     }
 }
