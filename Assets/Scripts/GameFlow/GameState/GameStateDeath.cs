@@ -13,10 +13,6 @@ namespace GameFlow.GameState
 
         [SerializeField] private DeathStateController _deathStateController;
         [SerializeField] private TimerController _deathTimerController;
-        
-        // Completion circle fields
-        [SerializeField] private Image _completionCircle;
-
 
         private float _deathTime;
 
