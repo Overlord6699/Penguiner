@@ -5,16 +5,22 @@ using UnityEngine.UI;
 
 public class GameStateDeath : GameState, IUnityAdsListener
 {
-    public GameObject deathUI;
-    [SerializeField] private TextMeshProUGUI highscore;
-    [SerializeField] private TextMeshProUGUI currentScore;
-    [SerializeField] private TextMeshProUGUI fishTotal;
-    [SerializeField] private TextMeshProUGUI currentFish;
+    [SerializeField]
+    private GameObject _deathUI;
+
+    [SerializeField] private TextMeshProUGUI _highScore;
+    [SerializeField] private TextMeshProUGUI _currentScore;
+    [SerializeField] private TextMeshProUGUI _fishTotal;
+    [SerializeField] private TextMeshProUGUI _currentFish;
 
     // Completion circle fields
-    [SerializeField] private Image completionCircle;
-    public float timeToDecision = 2.5f;
-    private float deathTime;
+    [SerializeField] 
+    private Image _completionCircle;
+    [SerializeField]
+    private float _decisionTime = 2.5f;
+
+
+    private float _deathTime;
 
     private void OnEnable()
     {
@@ -31,14 +37,14 @@ public class GameStateDeath : GameState, IUnityAdsListener
         base.Construct();
         GameManager.Instance.PauseGame();
 
-        deathTime = Time.time;
-        deathUI.SetActive(true);
+        _deathTime = Time.time;
+        _deathUI.SetActive(true);
 
         // Prior to saving, set the highscore if needed
-        if (SaveManager.Instance.save.Highscore < (int)GameStats.Instance.score)
+        if (SaveManager.Instance.SaveState.Highscore < (int)GameStats.Instance.score)
         {
-            SaveManager.Instance.save.Highscore = (int)GameStats.Instance.score;
-            currentScore.color = Color.green;
+            SaveManager.Instance.SaveState.Highscore = (int)GameStats.Instance.score;
+            _currentScore.color = Color.green;
 
             if (GameManager.Instance.IsConnectedToGooglePlayServices)
             {
@@ -58,32 +64,32 @@ public class GameStateDeath : GameState, IUnityAdsListener
         }
         else
         {
-            currentScore.color = Color.white;
+            _currentScore.color = Color.white;
         }
 
-        SaveManager.Instance.save.Fish += GameStats.Instance.fishCollectedThisSession;
+        SaveManager.Instance.SaveState.Fish += GameStats.Instance.fishCollectedThisSession;
         SaveManager.Instance.Save();
 
-        highscore.text = "Highscore :  " + SaveManager.Instance.save.Highscore;
-        currentScore.text = GameStats.Instance.ScoreToText();
-        fishTotal.text = "Total fish :" + SaveManager.Instance.save.Fish;
-        currentFish.text = GameStats.Instance.FishToText();
+        _highScore.text = "Highscore :  " + SaveManager.Instance.SaveState.Highscore;
+        _currentScore.text = GameStats.Instance.ScoreToText();
+        _fishTotal.text = "Total fish :" + SaveManager.Instance.SaveState.Fish;
+        _currentFish.text = GameStats.Instance.FishToText();
     }
 
     public override void Destruct()
     {
-        deathUI.SetActive(false);
+        _deathUI.SetActive(false);
     }
 
     public override void UpdateState()
     {
-        float ratio = (Time.time - deathTime) / timeToDecision;
-        completionCircle.color = Color.Lerp(Color.green, Color.red, ratio);
-        completionCircle.fillAmount = 1 - ratio;
+        float ratio = (Time.time - _deathTime) / _decisionTime;
+        _completionCircle.color = Color.Lerp(Color.green, Color.red, ratio);
+        _completionCircle.fillAmount = 1 - ratio;
 
         if (ratio > 1)
         {
-            completionCircle.gameObject.SetActive(false);
+            _completionCircle.gameObject.SetActive(false);
         }
     }
 
@@ -94,13 +100,13 @@ public class GameStateDeath : GameState, IUnityAdsListener
 
     public void ResumeGame()
     {
-        brain.ChangeState(GetComponent<GameStateGame>());
+        _brain.ChangeState(GetComponent<GameStateGame>());
         GameManager.Instance.RespawnPlayer();
     }
 
     public void ToMenu()
     { 
-        brain.ChangeState(GetComponent<GameStateInit>());
+        _brain.ChangeState(GetComponent<GameStateInit>());
 
         Reset();
     }
@@ -112,7 +118,7 @@ public class GameStateDeath : GameState, IUnityAdsListener
 
     public void EnableRevive()
     { 
-        completionCircle.gameObject.SetActive(true);
+        _completionCircle.gameObject.SetActive(true);
     }
 
     public void OnUnityAdsReady(string placementId)
@@ -132,7 +138,7 @@ public class GameStateDeath : GameState, IUnityAdsListener
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        completionCircle.gameObject.SetActive(false);
+        _completionCircle.gameObject.SetActive(false);
         switch (showResult)
         {
             case ShowResult.Failed:

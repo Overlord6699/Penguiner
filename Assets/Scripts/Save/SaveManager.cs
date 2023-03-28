@@ -8,21 +8,21 @@ public class SaveManager : MonoBehaviour
     public static SaveManager Instance { get { return instance; } }
     private static SaveManager instance;
 
-    // Fields
-    public SaveState save;
-    private const string saveFileName = "data.ss";
-    private BinaryFormatter formatter;
+    public SaveState SaveState;
+  
 
-    // Actions
+
     public Action<SaveState> OnLoad; 
     public Action<SaveState> OnSave;
+
+    private BinaryFormatter _formatter;
+    private const string SAVE_FILE_NAME = "data.ss";
 
     private void Awake()
     {
         instance = this;
-        formatter = new BinaryFormatter();
+        _formatter = new BinaryFormatter();
 
-        // Try and load the previous save state
         Load();
     }
 
@@ -30,14 +30,14 @@ public class SaveManager : MonoBehaviour
     {
         try
         {
-            FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.Open, FileAccess.Read);
-            save = (SaveState)formatter.Deserialize(file);
+            FileStream file = new FileStream(Application.persistentDataPath + SAVE_FILE_NAME, FileMode.Open, FileAccess.Read);
+            SaveState = (SaveState)_formatter.Deserialize(file);
             file.Close();
-            OnLoad?.Invoke(save);
+            OnLoad?.Invoke(SaveState);
         }
         catch
         {
-            Debug.Log("Save file not found, let's create a new one!");
+            Debug.Log("Save file not found! Creating new file");
             Save();
         }
     }
@@ -45,17 +45,17 @@ public class SaveManager : MonoBehaviour
     public void Save()
     {
         // If theres no previous state found, create a new one!
-        if (save == null)
-            save = new SaveState();
+        if (SaveState == null)
+            SaveState = new SaveState();
 
         // Set the time at which we've tried saving
-        save.LastSaveTime = DateTime.Now;
+        SaveState.LastSaveTime = DateTime.Now;
 
         // Open a file on our system, and write to it
-        FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.OpenOrCreate, FileAccess.Write);
-        formatter.Serialize(file, save);
+        FileStream file = new FileStream(Application.persistentDataPath + SAVE_FILE_NAME, FileMode.OpenOrCreate, FileAccess.Write);
+        _formatter.Serialize(file, SaveState);
         file.Close();
 
-        OnSave?.Invoke(save);
+        OnSave?.Invoke(SaveState);
     }
 }

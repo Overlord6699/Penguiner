@@ -4,33 +4,45 @@ using UnityEngine.UI;
 
 public class GameStateShop : GameState
 {
-    public GameObject shopUI;
-    public TextMeshProUGUI totalFish;
-    public TextMeshProUGUI currentHatName;
-    public HatLogic hatLogic;
+    [SerializeField]
+    private GameObject _shopUI;
+    [SerializeField]
+    private TextMeshProUGUI _totalFishText;
+    [SerializeField]
+    private TextMeshProUGUI _currentHatNameText;
+    [SerializeField]
+    private HatLogic _hatLogic;
+
     private bool isInit = false;
     private int hatCount;
     private int unlockedHatCount;
 
     // Shop Item
-    public GameObject hatPrefab;
-    public Transform hatContainer;
-    private Hat[] hats;
+    [SerializeField]
+    private GameObject hatPrefab;
+    [SerializeField]
+    private Transform hatContainer;
+
+
 
     // Completion Circle
-    public Image completionCircle;
-    public TextMeshProUGUI completionText;
+    [SerializeField]
+    private Image completionCircle;
+    [SerializeField]
+    private TextMeshProUGUI completionText;
+
+    private Hat[] hats;
 
     public override void Construct()
     {
         GameManager.Instance.ChangeCamera(GameCamera.Shop);
         hats = Resources.LoadAll<Hat>("Hat");
-        shopUI.SetActive(true);
+        _shopUI.SetActive(true);
 
         if (!isInit)
         { 
-            totalFish.text = SaveManager.Instance.save.Fish.ToString("000");
-            currentHatName.text = hats[SaveManager.Instance.save.CurrentHatIndex].ItemName;
+            _totalFishText.text = SaveManager.Instance.SaveState.Fish.ToString("000");
+            _currentHatNameText.text = hats[SaveManager.Instance.SaveState.CurrentHatIndex].ItemName;
             PopulateShop();
             isInit = true;
         }
@@ -40,7 +52,7 @@ public class GameStateShop : GameState
 
     public override void Destruct()
     {
-        shopUI.SetActive(false);
+        _shopUI.SetActive(false);
     }
 
     private void PopulateShop()
@@ -56,7 +68,7 @@ public class GameStateShop : GameState
             // ItemName
             go.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = hats[index].ItemName;
             // Price
-            if (SaveManager.Instance.save.UnlockedHatFlag[i] == 0)
+            if (SaveManager.Instance.SaveState.UnlockedHatFlag[i] == 0)
                 go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = hats[index].ItemPrice.ToString();
             else
             { 
@@ -68,22 +80,22 @@ public class GameStateShop : GameState
 
     private void OnHatClick(int i)
     {
-        if (SaveManager.Instance.save.UnlockedHatFlag[i] == 1)
+        if (SaveManager.Instance.SaveState.UnlockedHatFlag[i] == 1)
         {
-            SaveManager.Instance.save.CurrentHatIndex = i;
-            currentHatName.text = hats[i].ItemName;
-            hatLogic.SelectHat(i);
+            SaveManager.Instance.SaveState.CurrentHatIndex = i;
+            _currentHatNameText.text = hats[i].ItemName;
+            _hatLogic.SelectHat(i);
             SaveManager.Instance.Save();
         }
         // If we don't have it, can we buy it?
-        else if (hats[i].ItemPrice <= SaveManager.Instance.save.Fish)
+        else if (hats[i].ItemPrice <= SaveManager.Instance.SaveState.Fish)
         {
-            SaveManager.Instance.save.Fish -= hats[i].ItemPrice;
-            SaveManager.Instance.save.UnlockedHatFlag[i] = 1;
-            SaveManager.Instance.save.CurrentHatIndex = i;
-            currentHatName.text = hats[i].ItemName;
-            hatLogic.SelectHat(i);
-            totalFish.text = SaveManager.Instance.save.Fish.ToString("000");
+            SaveManager.Instance.SaveState.Fish -= hats[i].ItemPrice;
+            SaveManager.Instance.SaveState.UnlockedHatFlag[i] = 1;
+            SaveManager.Instance.SaveState.CurrentHatIndex = i;
+            _currentHatNameText.text = hats[i].ItemName;
+            _hatLogic.SelectHat(i);
+            _totalFishText.text = SaveManager.Instance.SaveState.Fish.ToString("000");
             SaveManager.Instance.Save();
             hatContainer.GetChild(i).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
             unlockedHatCount++;
@@ -112,6 +124,6 @@ public class GameStateShop : GameState
 
     public void OnHomeClick()
     {
-        brain.ChangeState(GetComponent<GameStateInit>());
+        _brain.ChangeState(GetComponent<GameStateInit>());
     }
 }

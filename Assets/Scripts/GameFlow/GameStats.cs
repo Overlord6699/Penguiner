@@ -16,7 +16,7 @@ public class GameStats : MonoBehaviour
     public int totalFish;
     public int fishCollectedThisSession;
     public float pointsPerFish = 10.0f;
-    public AudioClip fishCollectSFX;
+
 
     // Internal Cooldown
     private float lastScoreUpdate;
@@ -89,7 +89,7 @@ public class GameStats : MonoBehaviour
     {
         fishCollectedThisSession++;
         OnCollectFish?.Invoke(fishCollectedThisSession);
-        AudioManager.Instance.PlaySFX(fishCollectSFX, 0.7f);
+        AudioManager.Instance.PlayFishCollectSFX();
     }
     public void ResetSession()
     {

@@ -3,18 +3,21 @@ using UnityEngine;
 
 public class HatLogic : MonoBehaviour
 {
-    [SerializeField] private Transform hatContainer;
-    private List<GameObject> hatModels = new List<GameObject>();
-    private Hat[] hats;
+    private const string FOLDER_NAME = "Hat";
+
+    [SerializeField] 
+    private Transform _hatContainer;
+    private List<GameObject> _hatModels = new List<GameObject>();
+    private Hat[] _hats;
 
     private void Start()
     {
-        hats = Resources.LoadAll<Hat>("Hat");
+        _hats = Resources.LoadAll<Hat>(FOLDER_NAME);
 
-        if (hats != null)
+        if (_hats != null)
         {
             SpawnHats();
-            SelectHat(SaveManager.Instance.save.CurrentHatIndex);
+            SelectHat(SaveManager.Instance.SaveState.CurrentHatIndex);
         }
         else
             Debug.Log("There are no hats");
@@ -23,23 +26,23 @@ public class HatLogic : MonoBehaviour
 
     private void SpawnHats()
     {
-        for (int i = 0; i < hats.Length; i++)
+        for (int i = 0; i < _hats.Length; i++)
         {
-            hatModels.Add(Instantiate(hats[i].Model, hatContainer) as GameObject);
+            _hatModels.Add(Instantiate(_hats[i].Model, _hatContainer) as GameObject);
         }
     }
 
     public void DisableAllHats()
     {
-        for (int i = 0; i < hatModels.Count; i++)
+        for (int i = 0; i < _hatModels.Count; i++)
         {
-            hatModels[i].SetActive(false);
+            _hatModels[i].SetActive(false);
         }
     }
 
     public void SelectHat(int index)
     {
         DisableAllHats();
-        hatModels[index].SetActive(true);
+        _hatModels[index].SetActive(true);
     }
 }

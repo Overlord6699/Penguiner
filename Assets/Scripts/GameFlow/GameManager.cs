@@ -4,42 +4,48 @@ using UnityEngine.SocialPlatforms;
 
 public enum GameCamera
 {
-    Init = 0,
-    Game = 1,
-    Shop = 2,
-    Respawn = 3
+    Init,
+    Game,
+    Shop,
+    Respawn
 }
 
 public class GameManager : MonoBehaviour
 {
-    public delegate void ProcessGamePause();
-    public event ProcessGamePause OnGamePaused, OnGameResumed;
-
     public static GameManager Instance { get { return instance; } }
     private static GameManager instance;
 
-    public Transform MotorTransform { get { return motor.transform; } }
+    public delegate void ProcessGamePause();
+    public event ProcessGamePause OnGamePaused, OnGameResumed;
+
+
+
+    public Transform MotorTransform { get { return _motor.transform; } }
     [SerializeField]
-    private PlayerMotor motor;
-    [SerializeField]
-    private WorldGeneration worldGeneration;
+    private PlayerMotor _motor;
 
 
     [SerializeField]
-    private SceneChunkGeneration sceneChunkGeneration;
-    [SerializeField]
-    private GameObject[] cameras;
-    [SerializeField]
-    private bool isConnectedToGooglePlayServices;
-    public bool IsConnectedToGooglePlayServices { get { return isConnectedToGooglePlayServices; } }
+    private WorldGeneration _worldGeneration;
 
-    private GameState state;
+
+    [SerializeField]
+    private SceneChunkGeneration _sceneChunkGeneration;
+    [SerializeField]
+    private GameObject[] _cameras;
+
+    [SerializeField]
+    private bool _isConnectedToGooglePlayServices;
+    public bool IsConnectedToGooglePlayServices { get { return _isConnectedToGooglePlayServices; } }
+
+
+    private GameState _state;
 
     private void Awake()
     {
 #if UNITY_ANDROID
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
+        /*PlayGamesPlatform.DebugLogEnabled = true;
+        PlayGamesPlatform.Activate();*/
 #endif
         Debug.Log(Application.persistentDataPath);
 
@@ -48,13 +54,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {       
-        state = GetComponent<GameStateInit>();
-        state.Construct();
+        _state = GetComponent<GameStateInit>();
+        _state.Construct();
 
-        SignInToGooglePlayServices();
+        //SignInToGooglePlayServices();
     }
 
-    public void SignInToGooglePlayServices()
+ /*   public void SignInToGooglePlayServices()
     {
 #if UNITY_ANDROID
         PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (result) => {
@@ -69,44 +75,44 @@ public class GameManager : MonoBehaviour
             }
         });
 #endif
-    }
+    }*/
 
     private void Update()
     {
-        state.UpdateState();
+        _state.UpdateState();
     }
 
-    public void ChangeState(GameState s)
+    public void ChangeState(GameState state)
     {
-        state.Destruct();
-        state = s;
-        state.Construct();
+        _state.Destruct();
+        _state = state;
+        _state.Construct();
     }
 
-    public void ChangeCamera(GameCamera c)
+    public void ChangeCamera(GameCamera cam)
     {
-        foreach (GameObject go in cameras)
+        foreach (GameObject go in _cameras)
             go.SetActive(false);
 
-        cameras[(int)c].SetActive(true);
+        _cameras[(int)cam].SetActive(true);
     }
 
     public void Reset()
     {
-        motor.ResetPlayer();
-        worldGeneration.ResetWorld();
-        sceneChunkGeneration.ResetWorld();
+        _motor.ResetPlayer();
+        _worldGeneration.ResetWorld();
+        _sceneChunkGeneration.ResetWorld();
     }
 
     public void ScanPosition()
     {
-        GameManager.Instance.worldGeneration.ScanPosition();
-        GameManager.Instance.sceneChunkGeneration.ScanPosition();
+        _worldGeneration.ScanPosition();
+        _sceneChunkGeneration.ScanPosition();
     }
 
     public void RespawnPlayer()
     {
-        motor.RespawnPlayer();
+        _motor.RespawnPlayer();
     }
 
 #region PAUSE

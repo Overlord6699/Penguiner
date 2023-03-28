@@ -1,6 +1,6 @@
 ﻿using System;
 
-[System.Serializable]
+[Serializable]
 public class SaveState
 {
     [NonSerialized] private const int HAT_COUNT = 31;

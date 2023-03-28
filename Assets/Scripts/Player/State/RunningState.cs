@@ -2,6 +2,8 @@
 
 public class RunningState : BaseState
 {
+    //private Vector3 _prevAcc= Input.acceleration;
+
     public override void Construct(AnimationController cont)
     {
         base.Construct(cont);
@@ -21,6 +23,25 @@ public class RunningState : BaseState
 
     public override void Transition()
     {
+        /*var acc = Input.acceleration;
+
+        if(acc.y-_prevAcc.y>0)
+            motor.ChangeState(GetComponent<JumpingState>());
+
+        if (acc.y - _prevAcc.y < 0)
+            motor.ChangeState(GetComponent<SlidingState>());
+
+        if (acc.x - _prevAcc.x > 0)
+            motor.ChangeLane(RIGHT);
+
+
+        if (acc.x - _prevAcc.x < 0)
+            motor.ChangeLane(LEFT);
+
+
+        if (!motor.isGrounded)
+            motor.ChangeState(GetComponent<FallingState>());*/
+
         if (InputManager.Instance.SwipeLeft)
             motor.ChangeLane(LEFT);
 
@@ -35,5 +56,7 @@ public class RunningState : BaseState
 
         if (InputManager.Instance.SwipeDown)
             motor.ChangeState(GetComponent<SlidingState>());
+
+        //_prevAcc = acc;
     }
 }

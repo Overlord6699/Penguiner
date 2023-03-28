@@ -3,41 +3,45 @@ using UnityEngine;
 
 public class GameStateInit : GameState
 {
-    public GameObject menuUI;
-    [SerializeField] private TextMeshProUGUI hiscoreText;
-    [SerializeField] private TextMeshProUGUI fishcountText;
-    [SerializeField] private AudioClip menuLoopMusic;
+    [SerializeField]
+    private GameObject _menuUI;
+    [SerializeField] 
+    private TextMeshProUGUI _hiscoreText;
+    [SerializeField] 
+    private TextMeshProUGUI _fishcountText;
+    [SerializeField] 
+    private AudioClip _menuLoopMusic;
 
     public override void Construct()
     {
         GameManager.Instance.ChangeCamera(GameCamera.Init);
 
-        hiscoreText.text = "Highscore: " + SaveManager.Instance.save.Highscore.ToString();
-        fishcountText.text = "Fish: " + SaveManager.Instance.save.Fish.ToString();
+        _hiscoreText.text = "Highscore: " + SaveManager.Instance.SaveState.Highscore.ToString();
+        _fishcountText.text = "Fish: " + SaveManager.Instance.SaveState.Fish.ToString();
 
-        menuUI.SetActive(true);
+        _menuUI.SetActive(true);
 
-        if (SaveManager.Instance.save.Fish >= 300)
+        if (SaveManager.Instance.SaveState.Fish >= 300)
             //Social.ReportProgress(GPGSIds.achievement_money_in_the_bank, 100.0f, null);
 
-        AudioManager.Instance.PlayMusicWithXFade(menuLoopMusic, 0.5f);
+        AudioManager.Instance.PlayMusicWithXFade(_menuLoopMusic, 0.5f);
     }
 
     public override void Destruct()
     {
-        menuUI.SetActive(false);
+        _menuUI.SetActive(false);
     }
 
     public void OnPlayClick()
     {
-        brain.ChangeState(GetComponent<GameStateGame>());
+        _brain.ChangeState(GetComponent<GameStateGame>());
         GameStats.Instance.ResetSession();
         GetComponent<GameStateDeath>().EnableRevive();
     }
 
     public void OnShopClick()
     {
-        brain.ChangeState(GetComponent<GameStateShop>());
+        _brain.ChangeState(GetComponent<GameStateShop>());
     }
 
     public void OnAchievementClick()
@@ -48,7 +52,7 @@ public class GameStateInit : GameState
         }
         else
         {
-            GameManager.Instance.SignInToGooglePlayServices();
+            //GameManager.Instance.SignInToGooglePlayServices();
         }
     }
 
@@ -60,7 +64,7 @@ public class GameStateInit : GameState
         }
         else
         {
-            GameManager.Instance.SignInToGooglePlayServices();
+            //GameManager.Instance.SignInToGooglePlayServices();
         }
     }
 }

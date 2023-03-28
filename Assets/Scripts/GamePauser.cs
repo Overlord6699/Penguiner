@@ -3,7 +3,7 @@
 public class GamePauser : MonoBehaviour
 {
     [SerializeField]
-    private PlayerMotor player;
+    private PlayerMotor _player;
 
     private void Start()
     {
@@ -13,11 +13,11 @@ public class GamePauser : MonoBehaviour
 
     public void ResumeGame()
     {
-        player.ResumePlayer();
+        _player.ResumePlayer();
     }
 
     public void PauseGame()
     {
-        player.PausePlayer();
+        _player.PausePlayer();
     }
 }

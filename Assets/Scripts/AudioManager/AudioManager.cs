@@ -6,11 +6,16 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get { return instance; } }
     private static AudioManager instance;
 
-    [SerializeField] private float musicVolume = 1;
+    [SerializeField] private float _musicVolume = 1;
 
     private AudioSource music1;
     private AudioSource music2;
     private AudioSource sfxSource;
+
+    [SerializeField]
+    private AudioClip _fishCollectSound;
+    [SerializeField]
+    private AudioClip _hitSound;
 
     private bool firstMusicSourceActive;
 
@@ -28,10 +33,21 @@ public class AudioManager : MonoBehaviour
         music2.loop = true;
     }
 
+    public void PlayFishCollectSFX()
+    {
+        PlaySFX(_fishCollectSound, 0.7f);
+    }
+
+    public void PlayHitSFX()
+    {
+        PlaySFX(_hitSound, 0.7f);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
     }
+
     public void PlaySFX(AudioClip clip, float volume)
     {
         sfxSource.PlayOneShot(clip, volume);
@@ -63,13 +79,13 @@ public class AudioManager : MonoBehaviour
 
         for (t = 0.0f ; t <= transitionTime; t += Time.deltaTime)
         {
-            original.volume = musicVolume - ((t / transitionTime) * musicVolume);
-            newSource.volume = (t / transitionTime) * musicVolume;
+            original.volume = _musicVolume - ((t / transitionTime) * _musicVolume);
+            newSource.volume = (t / transitionTime) * _musicVolume;
             yield return null;
         }
 
         original.volume = 0;
-        newSource.volume = musicVolume;
+        newSource.volume = _musicVolume;
 
         original.Stop();
     }

@@ -19,7 +19,6 @@ public class PlayerMotor : MonoBehaviour
     public CharacterController controller;
     [SerializeField]
     private AnimationController animController;
-    public AudioClip hitSound;
 
     private BaseState state;
     private bool isPaused;
@@ -40,7 +39,13 @@ public class PlayerMotor : MonoBehaviour
             UpdateMotor();
     }
     private void UpdateMotor()
-    {
+    {// Check if we're grounded
+        isGrounded = controller.isGrounded;
+
+        // Are we trying to change state?
+        state.Transition();
+
+        
         // Check if we're grounded
         isGrounded = controller.isGrounded;
 
@@ -136,7 +141,7 @@ public class PlayerMotor : MonoBehaviour
 
         if (hitLayerName == "Death")
         {
-            AudioManager.Instance.PlaySFX(hitSound, 0.7f);
+            AudioManager.Instance.PlayHitSFX();
             ChangeState(GetComponent<DeathState>());
         }
     }

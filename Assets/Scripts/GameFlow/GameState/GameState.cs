@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-public abstract class GameState : MonoBehaviour
+public abstract class GameState : MonoBehaviour, IGameState
 {
-    protected GameManager brain;
+    protected GameManager _brain;
 
     protected virtual void Awake()
     {
-        brain = GetComponent<GameManager>();
+        _brain = GetComponent<GameManager>();
     }
 
     public virtual void Construct()
