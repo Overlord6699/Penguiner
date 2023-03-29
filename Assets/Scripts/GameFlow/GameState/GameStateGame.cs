@@ -1,7 +1,5 @@
 ﻿using Audio;
 using Controllers;
-using TMPro;
-using UI.Views;
 using UnityEngine;
 
 namespace GameFlow.GameState

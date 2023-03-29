@@ -1,13 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class InputManager : MonoBehaviour
 {
     // There should be only one InputManager in the scene
-    private static InputManager instance;
-    public static InputManager Instance { get { return instance; } }
+    private static InputManager _instance;
+    public static InputManager Instance { get { return _instance; } }
 
     // Action schemes
     private RunnerInputAction actionScheme;
@@ -16,37 +14,47 @@ public class InputManager : MonoBehaviour
     [SerializeField] private float sqrSwipeDeadzone = 50.0f;
 
     #region public properties
-    public bool Tap { get { return tap; } }
-    public Vector2 TouchPosition { get { return touchPosition; } }
-    public bool SwipeLeft { get { return swipeLeft; } }
-    public bool SwipeRight { get { return swipeRight; } }
-    public bool SwipeUp { get { return swipeUp; } }
-    public bool SwipeDown { get { return swipeDown; } }
+    public bool Tap { get { return _tap; } }
+    public Vector2 TouchPosition { get { return _touchPosition; } }
+    public bool SwipeLeft => _swipeLeft;
+    public bool SwipeRight { get { return _swipeRight; } }
+    public bool SwipeUp { get { return _swipeUp; } }
+    public bool SwipeDown { get { return _swipeDown; } }
     #endregion
 
     #region privates
-    private bool tap;
-    private Vector2 touchPosition;
-    private Vector2 startDrag;
-    private bool swipeLeft;
-    private bool swipeRight;
-    private bool swipeUp;
-    private bool swipeDown;
+    private bool _tap;
+    private Vector2 _touchPosition;
+    private Vector2 _startDrag;
+    private bool _swipeLeft;
+    private bool _swipeRight;
+    private bool _swipeUp;
+    private bool _swipeDown;
     #endregion
 
     private void Awake()
     {
-        instance = this;
+        _instance = this;
         DontDestroyOnLoad(gameObject);
         SetupControl();
     }
+    
+    public void OnEnable()
+    {
+        actionScheme.Enable();
+    }
+    public void OnDisable()
+    {
+        actionScheme.Disable();
+    }
+    
     private void LateUpdate()
     {
         ResetInputs();
     }
     private void ResetInputs()
     {
-        tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;
+        _tap = _swipeLeft = _swipeRight = _swipeUp = _swipeDown = false;
     }
 
     private void SetupControl()
@@ -62,7 +70,7 @@ public class InputManager : MonoBehaviour
 
     private void OnEndDrag(InputAction.CallbackContext ctx)
     {
-        Vector2 delta = touchPosition - startDrag;
+        Vector2 delta = _touchPosition - _startDrag;
         float sqrDistance = delta.sqrMagnitude;
 
         // Confirmed swipe
@@ -74,41 +82,32 @@ public class InputManager : MonoBehaviour
             if (x > y) // Left or Right
             {
                 if (delta.x > 0)
-                    swipeRight = true;
+                    _swipeRight = true;
                 else
-                    swipeLeft = true;
+                    _swipeLeft = true;
             }
             else // Up or Down
             {
                 if (delta.y > 0)
-                    swipeUp = true;
+                    _swipeUp = true;
                 else
-                    swipeDown = true;
+                    _swipeDown = true;
             }
         }
 
-        startDrag = Vector2.zero;
+        _startDrag = Vector2.zero;
     }
     private void OnStartDrag(InputAction.CallbackContext ctx)
     {
-        startDrag = touchPosition;
+        _startDrag = _touchPosition;
     }
     private void OnPosition(InputAction.CallbackContext ctx)
     {
-        touchPosition = ctx.ReadValue<Vector2>();
+        _touchPosition = ctx.ReadValue<Vector2>();
     }
     private void OnTap(InputAction.CallbackContext ctx)
     {
-        tap = true;
-    }
-
-    public void OnEnable()
-    {
-        actionScheme.Enable();
-    }
-    public void OnDisable()
-    {
-        actionScheme.Disable();
+        _tap = true;
     }
 }
 

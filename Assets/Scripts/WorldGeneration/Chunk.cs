@@ -4,7 +4,7 @@ namespace WorldGeneration
 {
     public class Chunk : MonoBehaviour
     {
-        public float chunkLength;
+        public float ChunkLength;
 
         public Chunk ShowChunk()
         {

@@ -1,7 +1,5 @@
-﻿using System;
-using GameFlow.GameState;
+﻿using GameFlow.GameState;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 using WorldGeneration;
 
 public enum GameCamera

@@ -24,6 +24,7 @@
             <e p="DeathStateController.cs" t="Include" />
             <e p="GameStateController.cs" t="Include" />
             <e p="InitGameController.cs" t="Include" />
+            <e p="ShopStateController.cs" t="Include" />
             <e p="TimerController.cs" t="Include" />
           </e>
           <e p="GameFlow" t="Include">
@@ -74,6 +75,7 @@
               <e p="DeathStateView.cs" t="Include" />
               <e p="GameStateView.cs" t="Include" />
               <e p="InitGameView.cs" t="Include" />
+              <e p="ShopStateView.cs" t="Include" />
               <e p="TimerView.cs" t="Include" />
             </e>
           </e>

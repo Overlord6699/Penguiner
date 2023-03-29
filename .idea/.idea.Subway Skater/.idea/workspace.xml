@@ -16,60 +16,39 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5940b94-33f2-4689-a7ad-fb112785dc5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ShopStateView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ShopStateView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/AtlasTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/AtlasTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/GreenScreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/GreenScreen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/Letters.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/Letters.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Environement/Materials/AtlasTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Environement/Materials/AtlasTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Gameplay/Materials/AtlasTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Gameplay/Materials/AtlasTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Letters/Materials/LPN&amp;L_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Letters/Materials/LPN&amp;L_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Models/Penguin/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Models/Penguin/Materials/No Name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Shop/HatItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Shop/HatItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateGame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/IGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/IGameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inputs/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inputs/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/BaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/DeathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/FallingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/FallingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/JumpingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/JumpingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/RespawnState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/RespawnState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/State/SlidingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/State/SlidingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/SaveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Hat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Hat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/HatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/HatLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SceneChunkGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SceneChunkGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SnowFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/SnowFloor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,15 +59,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InitGameController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/TimerView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@3.7.5/Runtime/Advertisement/Platform/Editor/EditorPlatform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/InitGameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3CAFB3E-3A59-4982-8093-F6D6A507725B/e6/54bda6b6/Social.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/DeathStateView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ShopStateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InitGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/TimerView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MaskableGraphic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/InitGameView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A59C552-C85F-43A9-BCAA-F39EB0BF8B0D/5d/76f27540/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configuration/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -123,6 +111,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/TimerView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/ShopStateView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShopStateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/InputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" />
       </list>
     </option>
   </component>
@@ -144,6 +137,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CodeCleanupOptionsPage" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -184,8 +178,24 @@
       <workItem from="1680007482160" duration="1000" />
       <workItem from="1680007896427" duration="1442000" />
       <workItem from="1680038071391" duration="41000" />
-      <workItem from="1680041925189" duration="2337000" />
+      <workItem from="1680041925189" duration="2974000" />
+      <workItem from="1680092354036" duration="7883000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: added MVC pattern, split massive scripts">
+      <created>1680044816708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680044816708</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor: several states">
+      <created>1680044888983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680044888983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +217,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: added MVC pattern, split massive scripts" />
+    <MESSAGE value="refactor: several states" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: several states" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1680000230029">
@@ -273,6 +286,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1680000230030" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1680092717724">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1680092717724" />
+    <state x="552" y="244" key="Vcs.Push.Dialog.v2" timestamp="1680044891117">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1680044891117" />
     <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1679999475043">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

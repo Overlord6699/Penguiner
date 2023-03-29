@@ -6169,6 +6169,8 @@ GameObject:
   - component: {fileID: 1279617394}
   - component: {fileID: 1279617393}
   - component: {fileID: 1279617392}
+  - component: {fileID: 1279617397}
+  - component: {fileID: 1279617396}
   m_Layer: 5
   m_Name: Canvas_Shop
   m_TagString: Untagged
@@ -6261,6 +6263,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1279617396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279617391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d45615fd0c3164d9cb58d8be24ad31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _view: {fileID: 1279617397}
+  _hatContainer: {fileID: 382833928}
+  _hatPrefab: {fileID: 2195345077318915026, guid: 5edbb77cf0eb6e94289e5f15d9d9793b,
+    type: 3}
+--- !u!114 &1279617397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279617391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78fe455e0d246f9bde6efded5c8a805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHatName: {fileID: 972729625}
+  _totalFish: {fileID: 1882416741}
+  _completionCircle: {fileID: 309087403}
+  _completionText: {fileID: 456065876}
 --- !u!1 &1279650295
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,7 +8722,6 @@ MonoBehaviour:
   _deathUI: {fileID: 1279650295}
   _deathStateController: {fileID: 1279650302}
   _deathTimerController: {fileID: 1279650304}
-  _completionCircle: {fileID: 580529975}
 --- !u!114 &1795705832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8732,14 +8765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopUI: {fileID: 1279617391}
-  _totalFishText: {fileID: 1882416741}
-  _currentHatNameText: {fileID: 972729625}
+  _shopStateController: {fileID: 1279617396}
   _hatLogic: {fileID: 1860200501}
-  hatPrefab: {fileID: 2195345077318915026, guid: 5edbb77cf0eb6e94289e5f15d9d9793b,
-    type: 3}
-  hatContainer: {fileID: 382833928}
-  completionCircle: {fileID: 309087403}
-  completionText: {fileID: 456065876}
 --- !u!114 &1795705836
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,7 +1,6 @@
 ﻿using Animation;
 using Player.State;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Audio;
 
 public class PlayerMotor : MonoBehaviour

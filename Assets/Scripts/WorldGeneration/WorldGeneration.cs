@@ -6,9 +6,10 @@ namespace WorldGeneration
     public class WorldGeneration : MonoBehaviour
     {
         #region Gameplay
-        private float chunkSpawnZ;
-        private Queue<Chunk> activeChunks = new Queue<Chunk>();
-        private List<Chunk> chunkPool = new List<Chunk>();
+        private float _chunkSpawnZ;
+        private Queue<Chunk> _activeChunks = new Queue<Chunk>();
+        //TODO object pool
+        private List<Chunk> _chunkPool = new List<Chunk>();
         #endregion
 
         #region Configurable fields
@@ -45,9 +46,9 @@ namespace WorldGeneration
         public void ScanPosition()
         {
             float cameraZ = cameraTransform.position.z;
-            Chunk lastChunk = activeChunks.Peek();
+            Chunk lastChunk = _activeChunks.Peek();
 
-            if (cameraZ >= lastChunk.transform.position.z + lastChunk.chunkLength + despawnDistance)
+            if (cameraZ >= lastChunk.transform.position.z + lastChunk.ChunkLength + despawnDistance)
             {
                 SpawnNewChunk();
                 DeleteLastChunk();
@@ -60,7 +61,7 @@ namespace WorldGeneration
             int randomIndex = Random.Range(0, chunkPrefabs.Count);
 
             // Does it already exist within our pool
-            Chunk chunk = chunkPool.Find(x => !x.gameObject.activeSelf && x.name == (chunkPrefabs[randomIndex].name + "(Clone)"));
+            Chunk chunk = _chunkPool.Find(x => !x.gameObject.activeSelf && x.name == (chunkPrefabs[randomIndex].name + "(Clone)"));
 
             // Create a chunk, if were not able to find one to reuse
             if (!chunk)
@@ -70,27 +71,27 @@ namespace WorldGeneration
             }
 
             // Place the object, and show it
-            chunk.transform.position = new Vector3(0, 0, chunkSpawnZ);
-            chunkSpawnZ += chunk.chunkLength;
+            chunk.transform.position = new Vector3(0, 0, _chunkSpawnZ);
+            _chunkSpawnZ += chunk.ChunkLength;
 
             // Store the value, to reuse in our pool
-            activeChunks.Enqueue(chunk);
+            _activeChunks.Enqueue(chunk);
             chunk.ShowChunk();
         }
 
         private void DeleteLastChunk()
         {
-            Chunk chunk = activeChunks.Dequeue();
+            Chunk chunk = _activeChunks.Dequeue();
             chunk.HideChunk();
-            chunkPool.Add(chunk);
+            _chunkPool.Add(chunk);
         }
 
         public void ResetWorld()
         {
             // Reset the ChunkSpawn Z
-            chunkSpawnZ = firstChunkSpawnPosition;
+            _chunkSpawnZ = firstChunkSpawnPosition;
 
-            for (int i = activeChunks.Count; i != 0; i--)
+            for (int i = _activeChunks.Count; i != 0; i--)
                 DeleteLastChunk();
 
             for (int i = 0; i < chunkOnScreen; i++)
