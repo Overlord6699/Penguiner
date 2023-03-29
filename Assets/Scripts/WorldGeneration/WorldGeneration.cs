@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace WorldGeneration
@@ -48,7 +49,7 @@ namespace WorldGeneration
             float cameraZ = cameraTransform.position.z;
             Chunk lastChunk = _activeChunks.Peek();
 
-            if (cameraZ >= lastChunk.transform.position.z + lastChunk.ChunkLength + despawnDistance)
+            if (cameraZ >= (lastChunk.transform.position.z + lastChunk.ChunkLength + despawnDistance))
             {
                 SpawnNewChunk();
                 DeleteLastChunk();

@@ -6,7 +6,7 @@ public class LevelSliderController : MonoBehaviour
 {
     [SerializeField]
     private int _numOfLevels = 5;
-
+    [SerializeField]
     private Slider _slider;
     private float[] _levelValues;
 

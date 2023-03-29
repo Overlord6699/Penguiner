@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numOfLevels: 5
+  _slider: {fileID: 69037265}
 --- !u!1 &87059345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,7 +4529,6 @@ GameObject:
   m_Component:
   - component: {fileID: 763837464}
   - component: {fileID: 763837463}
-  - component: {fileID: 763837465}
   m_Layer: 0
   m_Name: WorldGeneration
   m_TagString: Untagged
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstChunkSpawnPosition: 15
-  chunkOnScreen: 7
+  chunkOnScreen: 3
   despawnDistance: 5
   chunkPrefabs:
   - {fileID: 4131420594646783220, guid: b5e295d6395d8f34f8ef6ce787039795, type: 3}
@@ -4576,32 +4576,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &763837465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763837462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623eb9f379a66004b8ee82e0f37d605d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstChunkSpawnPosition: 20
-  chunkOnScreen: 8
-  despawnDistance: 5
-  chunkPrefabs:
-  - {fileID: 4131420594646783220, guid: b5e295d6395d8f34f8ef6ce787039795, type: 3}
-  - {fileID: 4115433306941779013, guid: df9874ae7de0ba5418de868d65de0eb5, type: 3}
-  - {fileID: 5467714723253863047, guid: 166a0bc23b10742479787df8ad70a5d2, type: 3}
-  - {fileID: 7670670890416341015, guid: 753bce4df916fcd458b627ab162ae93a, type: 3}
-  - {fileID: 3706618542235900740, guid: 52cc94bb90211d24a9764f574badee9b, type: 3}
-  - {fileID: 8987879368706197841, guid: 62eccd644bc21d54d882f6e83b886f5e, type: 3}
-  - {fileID: 6480671761058774223, guid: da5a13e3040eee5419ce271524df5c55, type: 3}
-  - {fileID: 2833223664574885030, guid: 6d681b012efffc1439d7551a56c8cf41, type: 3}
-  - {fileID: 1194023467380002549, guid: 7e3f03becd2e26b4dac63a2442c03d75, type: 3}
-  cameraTransform: {fileID: 308509260}
 --- !u!1 &769620388
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,7 +9850,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _motor: {fileID: 1860200494}
   _worldGeneration: {fileID: 763837463}
-  _sceneChunkGeneration: {fileID: 763837465}
   _cameras:
   - {fileID: 655997934}
   - {fileID: 920185790}
@@ -9914,6 +9887,7 @@ MonoBehaviour:
   _menuLoopMusic: {fileID: 8300000, guid: e0b4d0ef43c682145a4fd948d49ccd8f, type: 3}
   _controller: {fileID: 1675651083}
   _levelProvider: {fileID: 1782895123}
+  _playerController: {fileID: 1860200503}
 --- !u!114 &1795705830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10392,6 +10366,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1860200491}
+--- !u!114 &1860200503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860200490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3699f6d708b4544d8dd78b7eed98ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1870860068
 GameObject:
   m_ObjectHideFlags: 0

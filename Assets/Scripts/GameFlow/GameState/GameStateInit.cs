@@ -1,5 +1,6 @@
 ﻿using Audio;
 using Controllers;
+using Player;
 using Save;
 using UnityEngine;
 
@@ -21,7 +22,9 @@ namespace GameFlow.GameState
        
         [SerializeField]
         private LevelConfigProvider _levelProvider;
-    
+        [SerializeField]
+        private PlayerController _playerController;
+        
         public override void Construct()
         {
             GameManager.Instance.ChangeCamera(GameCamera.Init);
@@ -41,10 +44,18 @@ namespace GameFlow.GameState
             _menuUI.SetActive(false);
         }
 
+        private LevelConfiguration LoadLevel()
+        {
+            _levelController.CalculateLevel();
+            var level = _levelController.Level;
+            return _levelProvider.GetConfigById(level);
+        }
+        
         public void OnPlayClick()
         {
-            var level = _levelController.Level;
-            var config = _levelProvider.GetConfigById(level);
+            var config = LoadLevel();
+            
+            _playerController.Init(config.PlayerConfiguration);
             
             _brain.ChangeState(GetComponent<GameStateGame>());
             GameStats.Instance.ResetSession();

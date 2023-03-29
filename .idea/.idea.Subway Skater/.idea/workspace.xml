@@ -26,20 +26,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5940b94-33f2-4689-a7ad-fb112785dc5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Config/Levels.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfigProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfiguration.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LevelSliderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subway Skater/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Material/Snow.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configuration/SO/LevelConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configuration/SO/LevelConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LevelSliderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LevelSliderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +74,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/47/bad02c76/BinaryFormatter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MaskableGraphic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/InitGameView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configuration/SO/LevelConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A59C552-C85F-43A9-BCAA-F39EB0BF8B0D/5d/76f27540/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.7.8/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -114,15 +114,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShopStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/Chunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/State/RunningState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMotor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LevelSliderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfigProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/PlayerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/LevelConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/SO/LevelConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configuration/SO/PlayerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LevelSliderController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameState/GameStateInit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFlow/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -192,7 +195,8 @@
       <workItem from="1680041925189" duration="2974000" />
       <workItem from="1680092354036" duration="9561000" />
       <workItem from="1680105610603" duration="3678000" />
-      <workItem from="1680118899428" duration="5248000" />
+      <workItem from="1680118899428" duration="5632000" />
+      <workItem from="1680126479436" duration="2182000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added MVC pattern, split massive scripts">
       <created>1680044816708</created>
@@ -222,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680108750880</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: added configuration">
+      <created>1680125057674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680125057674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +260,8 @@
     <MESSAGE value="refactor: several states" />
     <MESSAGE value="refactor: changed Controllers" />
     <MESSAGE value="fix: fixed physics" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed physics" />
+    <MESSAGE value="feat: added configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added configuration" />
   </component>
   <component name="WindowStateProjectService">
     <state width="400" height="464" key="DebuggerActiveHint" timestamp="1680105952502">
@@ -328,10 +340,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1680105983609" />
-    <state x="552" y="244" key="Vcs.Push.Dialog.v2" timestamp="1680108755978">
+    <state x="552" y="244" key="Vcs.Push.Dialog.v2" timestamp="1680125060938">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1680108755978" />
+    <state x="552" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1680125060938" />
     <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1679999475043">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -373,6 +385,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs</url>
+          <line>53</line>
+          <properties documentPath="F:\Unity\Subway Skater\Assets\Scripts\WorldGeneration\WorldGeneration.cs" initialLine="53">
+            <startOffsets>
+              <option value="1692" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1708" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/WorldGeneration/WorldGeneration.cs</url>
+          <line>97</line>
+          <properties documentPath="F:\Unity\Subway Skater\Assets\Scripts\WorldGeneration\WorldGeneration.cs" initialLine="97">
+            <startOffsets>
+              <option value="3105" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3144" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

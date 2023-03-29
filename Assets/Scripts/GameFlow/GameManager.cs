@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
     private WorldGeneration.WorldGeneration _worldGeneration;
 
 
-    [SerializeField]
-    private SceneChunkGeneration _sceneChunkGeneration;
+    //[SerializeField]
+    //private SceneChunkGeneration _sceneChunkGeneration;
     [SerializeField]
     private GameObject[] _cameras;
 
@@ -100,13 +100,13 @@ public class GameManager : MonoBehaviour
     {
         _motor.ResetPlayer();
         _worldGeneration.ResetWorld();
-        _sceneChunkGeneration.ResetWorld();
+        //_sceneChunkGeneration.ResetWorld();
     }
 
     public void ScanPosition()
     {
         _worldGeneration.ScanPosition();
-        _sceneChunkGeneration.ScanPosition();
+        //_sceneChunkGeneration.ScanPosition();
     }
 
     public void RespawnPlayer()
