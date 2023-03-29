@@ -8984,8 +8984,8 @@ MonoBehaviour:
   baseSidewaySpeed: 10
   gravity: 14
   terminalVelocity: 20
-  controller: {fileID: 1860200495}
-  animController: {fileID: 1860200502}
+  Controller: {fileID: 1860200495}
+  _animController: {fileID: 1860200502}
 --- !u!143 &1860200495
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9068,7 +9068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalDistance: 25
-  immunityTime: 1
+  immunityTime: 5
 --- !u!114 &1860200501
 MonoBehaviour:
   m_ObjectHideFlags: 0

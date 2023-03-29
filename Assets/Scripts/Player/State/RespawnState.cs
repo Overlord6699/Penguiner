@@ -16,9 +16,9 @@ namespace Player.State
 
             startTime = Time.time;
 
-            motor.controller.enabled = false;
+            motor.Controller.enabled = false;
             motor.transform.position = new Vector3(0, verticalDistance, motor.transform.position.z);
-            motor.controller.enabled = true;
+            motor.Controller.enabled = true;
 
             motor.VerticalVelocity = 0.0f;
             motor.CurrentLane = 0;

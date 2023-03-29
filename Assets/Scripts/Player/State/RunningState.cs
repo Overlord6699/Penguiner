@@ -45,20 +45,28 @@ namespace Player.State
             if (!motor.isGrounded)
                 motor.ChangeState(GetComponent<FallingState>());*/
 
-            if (InputManager.Instance.SwipeLeft)
-                motor.ChangeLane(LEFT);
-
-            if (InputManager.Instance.SwipeRight)
-                motor.ChangeLane(RIGHT);
-
             if (InputManager.Instance.SwipeUp && motor.IsGrounded)
                 motor.ChangeState(GetComponent<JumpingState>());
+
+            if (InputManager.Instance.SwipeDown)
+                motor.ChangeState(GetComponent<SlidingState>());
+
+            if (InputManager.Instance.SwipeLeft)
+            {
+                motor.ChangeLane(LEFT);
+                Debug.Log("Swipe LEFT");
+            }
+
+            if (InputManager.Instance.SwipeRight)
+            {
+                motor.ChangeLane(RIGHT);
+                Debug.Log("Swipe RIGHT");
+            }
 
             if (!motor.IsGrounded)
                 motor.ChangeState(GetComponent<FallingState>());
 
-            if (InputManager.Instance.SwipeDown)
-                motor.ChangeState(GetComponent<SlidingState>());
+
 
             //_prevAcc = acc;
         }

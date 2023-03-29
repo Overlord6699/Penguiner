@@ -19,17 +19,17 @@ namespace Player.State
             animController.TriggerSlide();
             slideStart = Time.time;
 
-            initialSize = motor.controller.height;
-            initialCenter = motor.controller.center;
+            initialSize = motor.Controller.height;
+            initialCenter = motor.Controller.center;
 
-            motor.controller.height = initialSize * 0.5f;
-            motor.controller.center = initialCenter * 0.5f;
+            motor.Controller.height = initialSize * 0.5f;
+            motor.Controller.center = initialCenter * 0.5f;
         }
 
         public override void Destruct()
         {
-            motor.controller.height = initialSize;
-            motor.controller.center = initialCenter;
+            motor.Controller.height = initialSize;
+            motor.Controller.center = initialCenter;
             animController.TriggerRun();
         }
 
