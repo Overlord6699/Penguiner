@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerMotor _motor;
 
-
     [SerializeField]
     private WorldGeneration.WorldGeneration _worldGeneration;
 

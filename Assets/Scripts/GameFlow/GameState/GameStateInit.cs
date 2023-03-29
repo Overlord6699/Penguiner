@@ -8,6 +8,9 @@ namespace GameFlow.GameState
     public class GameStateInit : GameState
     {
         [SerializeField]
+        private LevelSliderController _levelController;
+        
+        [SerializeField]
         private GameObject _menuUI;
 
         [SerializeField] 
@@ -16,6 +19,8 @@ namespace GameFlow.GameState
         [SerializeField]
         private InitGameController _controller;
        
+        [SerializeField]
+        private LevelConfigProvider _levelProvider;
     
         public override void Construct()
         {
@@ -38,6 +43,9 @@ namespace GameFlow.GameState
 
         public void OnPlayClick()
         {
+            var level = _levelController.Level;
+            var config = _levelProvider.GetConfigById(level);
+            
             _brain.ChangeState(GetComponent<GameStateGame>());
             GameStats.Instance.ResetSession();
             GetComponent<GameStateDeath>().EnableRevive();

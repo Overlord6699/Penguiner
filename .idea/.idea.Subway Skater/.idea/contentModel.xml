@@ -15,9 +15,12 @@
           </e>
           <e p="Configuration" t="Include">
             <e p="ConfigurationManager.cs" t="Include" />
+            <e p="LevelConfigProvider.cs" t="Include" />
             <e p="SO" t="Include">
               <e p="AudioClipConfiguration.cs" t="Include" />
               <e p="AudioConfiguration.cs" t="Include" />
+              <e p="LevelConfiguration.cs" t="Include" />
+              <e p="PlayerConfiguration.cs" t="Include" />
             </e>
           </e>
           <e p="Controllers" t="Include">
@@ -51,6 +54,7 @@
             <e p="Animation" t="Include">
               <e p="AnimationController.cs" t="Include" />
             </e>
+            <e p="PlayerController.cs" t="Include" />
             <e p="PlayerMotor.cs" t="Include" />
             <e p="State" t="Include">
               <e p="BaseState.cs" t="Include" />
@@ -71,6 +75,7 @@
             <e p="HatLogic.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="LevelSliderController.cs" t="Include" />
             <e p="Views" t="Include">
               <e p="DeathStateView.cs" t="Include" />
               <e p="GameStateView.cs" t="Include" />
